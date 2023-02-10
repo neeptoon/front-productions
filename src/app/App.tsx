@@ -6,6 +6,7 @@ import {useTheme} from "app/providers/ThemeProvider";
 import { AppRouter } from './providers/router';
 import { NavBar } from 'widgets/NavBar';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { Sidebar } from 'widgets/Sidebar';
 
 
 const App = () => {
@@ -14,8 +15,11 @@ const App = () => {
     return (
         <div className={classNames('app', {}, [theme])}>
             <NavBar />
+            <Sidebar>
+                <ThemeSwitcher/>
+            </Sidebar>
             <AppRouter/>
-            <ThemeSwitcher/>
+
         </div>
     );
 };
