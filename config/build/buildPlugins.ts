@@ -15,6 +15,5 @@ export function buildPlugins({ paths }: BuildOptions): webpack.WebpackPluginInst
         }),
 
         new webpack.HotModuleReplacementPlugin(),
-    ]
-
+    ];
 }
